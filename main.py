@@ -2,6 +2,11 @@ import sys
 import mido
 import rtmidi
 
+controls = {
+    'soft/practice': {'control': 67, 'value': range(0,127)},
+    'sostenuto': {'control': 66, 'value': range(0,127)},
+    'sustain': { 'control': 64, 'value': range(0,127)}
+}
 
 def init():
     # mido supports several backends - rtmidi is default
